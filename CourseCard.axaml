@@ -1,0 +1,24 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" Width="400" Height="220"
+             x:Class="cit_course.CourseCard" CornerRadius="30" Background="White"
+             xmlns:local="clr-namespace:cit_course" ClipToBounds="True">
+
+             <!-- <UserControl.Resources>
+                    <local:CoursePercentConverter x:Key="myConverter"/>
+                </UserControl.Resources> -->
+
+             <Grid RowDefinitions="3*, *" ColumnDefinitions="*" ClipToBounds="True">
+                <Border ClipToBounds="True" CornerRadius="30" Margin="10 10 10 0">
+                   <Image Stretch="Uniform" Source="/Assets/Images/image.png"/>  
+                </Border>
+
+                <Label Grid.Row="1" Margin="0 10 0 0" Width="300" Content="Лучший курс на свете" FontSize="25" FontFamily="{StaticResource Montserrat}"/>
+
+            </Grid>
+
+
+
+</UserControl>

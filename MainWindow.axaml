@@ -1,0 +1,83 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="cit_course.MainWindow"
+        xmlns:components="clr-namespace:cit_course"
+        Title="cit_course"
+        Background="#F5F6F7">
+
+    <DockPanel>
+
+        <!-- Навбар сверху -->
+        <Border DockPanel.Dock="Top" CornerRadius="20" Margin="10" Background="White" Effect="{StaticResource ShadowEffect}">
+            <DockPanel Margin="10">
+
+                <!-- Лого слева -->
+                <Image Source="Assets/Images/TUT.png" Width="50" Height="50" VerticalAlignment="Center" DockPanel.Dock="Left"/>
+
+                <!-- Панель меню по центру -->
+                <Menu DockPanel.Dock="Left" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <MenuItem Header="Файл">
+                        <MenuItem Header="Открыть"/>
+                        <MenuItem Header="Сохранить"/>
+                        <MenuItem Header="Выход"/>
+                    </MenuItem>
+                    <MenuItem Header="Редактировать">
+                        <MenuItem Header="Копировать"/>
+                        <MenuItem Header="Вставить"/>
+                    </MenuItem>
+                    <MenuItem Header="Помощь">
+                        <MenuItem Header="О программе"/>
+                    </MenuItem>
+                </Menu>
+
+                <!-- Фото аккаунта справа -->
+                <Image Source="Assets/Images/user.png" Width="30" Height="30" VerticalAlignment="Center" DockPanel.Dock="Right" Margin="0,0,10,0"/>
+                
+            </DockPanel>
+        </Border>
+<!-- VerticalAlignment="Center" -->
+        <!-- Список карточек курсов, центрированный по вертикали и горизонтали -->
+        <ListBox Background="Transparent" Margin="0 10" HorizontalAlignment="Center" >
+            
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel HorizontalAlignment="Center"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+
+            <ListBox.Styles>
+                <Style Selector="ListBoxItem">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Padding" Value="10"/>
+                    <Setter Property="Margin" Value="5"/>
+                    <Setter Property="CornerRadius" Value="20"/>
+                    <Style Selector="^:selected">
+                        <Setter Property="Background" Value="Transparent"/>
+                    </Style>
+                </Style>
+            </ListBox.Styles>
+
+            <!-- Добавление элементов CourseCard -->
+            <components:CourseCard/>
+            <components:CourseCard/>
+            <components:CourseCard/>
+            <components:CourseCard/>
+            <components:CourseCard/>
+            <components:CourseCard/>
+            <components:CourseCard/>
+            <components:CourseCard/>
+            <components:CourseCard/>
+            <components:CourseCard/>
+            <components:CourseCard/>
+            <components:CourseCard/>
+            <components:CourseCard/>
+            <components:CourseCard/>
+            <components:CourseCard/>
+            
+            <!-- Дополнительные карточки -->
+        </ListBox>
+    </DockPanel>
+</Window>
